@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.7d5d447a.chunk.css",
+    "main.js": "/portfolio/static/js/main.fe224110.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.fe224110.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.3e7fea94.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.3e7fea94.js.map",
+    "static/js/2.86c33259.chunk.js": "/portfolio/static/js/2.86c33259.chunk.js",
+    "static/js/2.86c33259.chunk.js.map": "/portfolio/static/js/2.86c33259.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.6441dcef8eea69bd917e7bdb01c285e8.js": "/portfolio/precache-manifest.6441dcef8eea69bd917e7bdb01c285e8.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.7d5d447a.chunk.css.map": "/portfolio/static/css/main.7d5d447a.chunk.css.map",
+    "static/js/2.86c33259.chunk.js.LICENSE.txt": "/portfolio/static/js/2.86c33259.chunk.js.LICENSE.txt",
+    "static/media/bouncingmemory.png": "/portfolio/static/media/bouncingmemory.9f03a125.png",
+    "static/media/lunokhod.png": "/portfolio/static/media/lunokhod.0ea153da.png",
+    "static/media/profile.jpg": "/portfolio/static/media/profile.d67b84d7.jpg",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.6ca0d8d7.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e7fea94.js",
+    "static/js/2.86c33259.chunk.js",
+    "static/css/main.7d5d447a.chunk.css",
+    "static/js/main.fe224110.chunk.js"
+  ]
+}
