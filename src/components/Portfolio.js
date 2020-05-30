@@ -14,6 +14,7 @@ import {
 import Navbar from "./Navbar";
 import project1 from "../img/projects/bouncingmemory.png";
 import project2 from "../img/projects/lunokhod.png";
+import project3 from "../img/projects/welcometothefuture.png";
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -25,6 +26,7 @@ const useStyles = makeStyles({
         margin: "5rem auto"
     }
 })
+
 const Portfolio = () => {
     const classes = useStyles();
     return (
@@ -53,7 +55,7 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://www.youtube.com/watch?v=V1ehlOQD8bk&feature=youtu.be">
                                     Youtube
                                 </Button>
-                                <Button size="small" color="primary" href="/bouncingmemory">
+                                <Button size="small" color="primary" href="/portfolio/bouncingmemory">
                                     Detail
                                 </Button>
                             </CardActions>
@@ -83,7 +85,37 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://youtu.be/6ADK3B0P25g?list=PL0051NcAsnzAWeRg8jovYSgQ0m8rO6fD3">
                                     Youtube
                                 </Button>
-                                <Button size="small" color="primary" href="/meteor-cre-defense">
+                                <Button size="small" color="primary" href="/portfolio/meteor-cre-defense">
+                                    Detail
+                                </Button>
+                            </CardActions>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+
+                {/* Project 3 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia 
+                            component="img" 
+                            alt="Project 2"
+                            height="140" 
+                            image={project3} 
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Welcome to the Future
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    Unity
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://youtu.be/6ADK3B0P25g?list=PL0051NcAsnzAWeRg8jovYSgQ0m8rO6fD3">
+                                    Youtube
+                                </Button>
+                                <Button size="small" color="primary" href="/portfolio/welcometothefuture">
                                     Detail
                                 </Button>
                             </CardActions>
