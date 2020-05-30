@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     listItem: {
         color: "tan",
         margin: "0.8rem"
-    }
+    },
 }));
 
 const menuItems = [

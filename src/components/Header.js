@@ -41,7 +41,7 @@ function Header() {
             </Grid>
             <Typography className={classes.title} variant="h4">
                 {/* <Typed strings={["Hello, I'm Yongmin Cho"]} typeSpeed={40} /> */}
-                <Typing speed={40} cursorClassName={classes.cursor}>Hello, I'm Yongmin Cho </Typing>
+                <Typing speed={30} cursorClassName={classes.cursor}>Hello, I'm Yongmin Cho </Typing>
             </Typography>
             <br/>
             <Typography className={classes.subTitle} variant="h5">
@@ -51,7 +51,7 @@ function Header() {
                 backSpeed={60}
                 loop
                 /> */}
-                <Typing speed={40} loop cursorClassName={classes.cursor}>
+                <Typing speed={30} loop cursorClassName={classes.cursor}>
                     Front-end Development
                     <Typing.Delay ms={1000} />
                     <Typing.Backspace count={22}/>
