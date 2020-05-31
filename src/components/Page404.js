@@ -3,7 +3,9 @@ import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Navbar from "./Navbar";
+
 import Particles from "react-particles-js";
+import Typing from "react-typing-animation";
 
 const useStyles = makeStyles({
     particlesCanva: {
@@ -15,6 +17,9 @@ const useStyles = makeStyles({
         marginTop: "2rem",
         marginBottom: "10rem",
         fontFamily: 'Open Sans',
+    },
+    cursor: {
+        color: "#f2a365",
     },
 });
 
@@ -65,7 +70,11 @@ function Page404() {
                 }}
             />
             <Box component="div" textAlign="center">
-                <Typography className={classes.title} variant="h2" >404 Error, Page not found</Typography>
+                <Typography className={classes.title} variant="h2" >
+                <Typing speed={30} cursorClassName={classes.cursor}>
+                    404 Error, Page not found
+                </Typing>
+                </Typography>
             </Box>
         </Box>
     );
