@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import {
     Box,
@@ -9,12 +9,14 @@ import {
     CardMedia,
     Button,
     Typography,
-    CardContent
+    CardContent,
 } from "@material-ui/core"
 import Navbar from "./Navbar";
 import project1 from "../img/projects/bouncingmemory.png";
 import project2 from "../img/projects/lunokhod.png";
 import project3 from "../img/projects/welcometothefuture.png";
+
+import { bmExplanation, mdExplanation, wfExplanation } from "./Explanation";
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -28,6 +30,19 @@ const useStyles = makeStyles({
 })
 
 const Portfolio = () => {
+    const [prj1Show, setprj1Show] = useState(false);
+    function handleShow1() {
+        prj1Show ? setprj1Show(false) : setprj1Show(true);
+    }
+    const [prj2Show, setprj2Show] = useState(false);
+    function handleShow2() {
+        prj2Show ? setprj2Show(false) : setprj2Show(true);
+    }
+    const [prj3Show, setprj3Show] = useState(false);
+    function handleShow3() {
+        prj3Show ? setprj3Show(false) : setprj3Show(true);
+    }
+
     const classes = useStyles();
     return (
         <Box component="div" className={classes.mainContainer}>
@@ -48,7 +63,10 @@ const Portfolio = () => {
                                     Bouncing Memory
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Custom Game Engine based on C++
+                                    { prj1Show ? bmExplanation : bmExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShow1}>
+                                        { prj1Show ? "less" : "more" }
+                                    </Button>
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -78,7 +96,10 @@ const Portfolio = () => {
                                     Meteor-cre Defense
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    C-based Game Engine
+                                    { prj2Show ? mdExplanation : mdExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShow2}>
+                                        { prj2Show ? "less" : "more" }
+                                    </Button>
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -99,7 +120,7 @@ const Portfolio = () => {
                         <CardActionArea>
                             <CardMedia 
                             component="img" 
-                            alt="Project 2"
+                            alt="Project 3"
                             height="140" 
                             image={project3} 
                             />
@@ -108,11 +129,14 @@ const Portfolio = () => {
                                     Welcome to the Future
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Unity
+                                    { prj3Show ? wfExplanation : wfExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShow3}>
+                                        { prj3Show ? "less" : "more" }
+                                    </Button>
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://youtu.be/6ADK3B0P25g?list=PL0051NcAsnzAWeRg8jovYSgQ0m8rO6fD3">
+                                <Button size="small" color="primary" href="https://youtu.be/Qd2JnjiEkVg">
                                     Youtube
                                 </Button>
                                 <Button size="small" color="primary" href="/portfolio/welcometothefuture">

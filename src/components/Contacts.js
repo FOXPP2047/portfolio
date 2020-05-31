@@ -56,8 +56,8 @@ function Contacts() {
                     <br/>
                     <InputField fullWidth={true} label="Email" variant="outlined" inputProps={{style:{color: "white"}}} margin="dense" size="medium"/>
                     <br/>
-                    {/* <InputField fullWidth={true} label="Company Name" variant="outlined" inputProps={{style:{color: "white"}}} margin="dense" size="medium"/>
-                    <br/> */}
+                    <InputField fullWidth={true} rows="8" multiline="true" label="Message" variant="outlined" inputProps={{style:{color: "white"}}} margin="dense" size="large"/>
+                    <br/>
                     <Button className={classes.button} variant="outlined" fullWidth={true} endIcon={<SendIcon/>}>
                         Contact me
                     </Button>
