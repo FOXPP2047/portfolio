@@ -88,8 +88,8 @@ const Portfolio = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary" href="">
-                                Youtube(Not Yet)
+                            <Button size="small" color="primary" href="https://youtu.be/V4n0qX29d7E">
+                                Youtube
                             </Button>
                             <Button size="small" color="primary" href="https://github.com/FOXPP2047/SampleWebChat">
                                 Github
@@ -110,7 +110,7 @@ const Portfolio = () => {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5">
-                                Discord League of Legend Record Searcher
+                                LOL Record Searcher
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 { discordShow ? riotExplanation : riotExplanation.substr(0, 100) + "..." }
@@ -120,8 +120,8 @@ const Portfolio = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary" href="">
-                                Youtube(Not Yet)
+                            <Button size="small" color="primary" href="https://youtu.be/YZuoaD4f17w">
+                                Youtube
                             </Button>
                             <Button size="small" color="primary" href="https://github.com/FOXPP2047/riot_games_discord_bot">
                                 Github
