@@ -19,8 +19,9 @@ import project2 from "../img/projects/lunokhod.png";
 import wfImg from "../img/projects/welcometothefuture.png";
 import discordImg from "../img/projects/discord.jpg";
 import webchatImg from "../img/projects/webchat.png";
+import openglImg from "../img/projects/graphicsproject.png";
 
-import { bmExplanation, mdExplanation, wfExplanation, riotExplanation, webchatExplanation } from "./Explanation";
+import { bmExplanation, mdExplanation, wfExplanation, riotExplanation, webchatExplanation, graphicsExplanation } from "./Explanation";
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -54,6 +55,10 @@ const Portfolio = () => {
     function handleShowWebChat() {
         webchatShow ? setwebchatShow(false) : setwebchatShow(true);
     }
+    const [graphicsShow, setgraphicsShow] = useState(false);
+    function handleShowgraphics() {
+        graphicsShow ? setgraphicsShow(false) : setgraphicsShow(true);
+    }
 
     const classes = useStyles();
     return (
@@ -62,7 +67,7 @@ const Portfolio = () => {
             <CustomParticles />
             <Grid container justify="center" alignItems="center">
             {/* Project 5 Web Chat */}
-            <Grid item xs={12} sm={8} md={6}>
+            <Grid item xs={12} sm={8} md={4}>
                 <Card className={classes.cardContainer}>
                     <CardActionArea>
                         <CardMedia 
@@ -94,7 +99,7 @@ const Portfolio = () => {
                 </Card>
             </Grid>
             {/* Project 4 discord riot api */}
-            <Grid item xs={12} sm={8} md={6}>
+            <Grid item xs={12} sm={8} md={4}>
                 <Card className={classes.cardContainer}>
                     <CardActionArea>
                         <CardMedia 
@@ -126,7 +131,7 @@ const Portfolio = () => {
                 </Card>
             </Grid>
             {/* Project 1 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -159,7 +164,7 @@ const Portfolio = () => {
                 </Grid>
 
                 {/* Project 3 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -191,7 +196,7 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
                 {/* Project 2 */}
-                <Grid item xs={12} sm={8} md={6}>
+                <Grid item xs={12} sm={8} md={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -218,6 +223,38 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_150_what_I_did">
                                     Github
                                 </Button>
+                            </CardActions>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+                {/* Project 6 OpenGL Graphics Project */}
+                <Grid item xs={12} sm={8} md={4}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia 
+                            component="img" 
+                            alt="OpenGL graphics project"
+                            height="140" 
+                            image={openglImg} 
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    OpenGL Graphic Project
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    { graphicsShow ? graphicsExplanation : graphicsExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShowgraphics}>
+                                        { graphicsShow ? "less" : "more" }
+                                    </Button>
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://www.youtube.com/watch?v=RRc2RdBoLE8&feature=youtu.be">
+                                    Youtube
+                                </Button>
+                                {/* <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_150_what_I_did">
+                                    Github
+                                </Button> */}
                             </CardActions>
                         </CardActionArea>
                     </Card>
