@@ -73,8 +73,8 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://www.youtube.com/watch?v=V1ehlOQD8bk&feature=youtu.be">
                                     Youtube
                                 </Button>
-                                <Button size="small" color="primary" href="/portfolio/bouncingmemory">
-                                    Detail
+                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_200_what_I_did">
+                                    Github
                                 </Button>
                             </CardActions>
                         </CardActionArea>
@@ -106,8 +106,8 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://youtu.be/6ADK3B0P25g?list=PL0051NcAsnzAWeRg8jovYSgQ0m8rO6fD3">
                                     Youtube
                                 </Button>
-                                <Button size="small" color="primary" href="/portfolio/meteor-cre-defense">
-                                    Detail
+                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_150_what_I_did">
+                                    Github
                                 </Button>
                             </CardActions>
                         </CardActionArea>
@@ -140,7 +140,7 @@ const Portfolio = () => {
                                     Youtube
                                 </Button>
                                 <Button size="small" color="primary" href="/portfolio/welcometothefuture">
-                                    Detail
+                                    Github
                                 </Button>
                             </CardActions>
                         </CardActionArea>
