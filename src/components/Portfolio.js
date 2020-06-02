@@ -11,8 +11,8 @@ import {
     Typography,
     CardContent,
 } from "@material-ui/core"
-import Particles from "react-particles-js";
 import Navbar from "./Navbar";
+import CustomParticles from "./Particles";
 
 import project1 from "../img/projects/bouncingmemory.png";
 import project2 from "../img/projects/lunokhod.png";
@@ -29,10 +29,6 @@ const useStyles = makeStyles({
     cardContainer: {
         maxWidth: 345,
         margin: "5rem auto"
-    },
-    particlesCanva: {
-        position: "absolute",
-        opacity: "0.3",
     },
 })
 
@@ -58,46 +54,7 @@ const Portfolio = () => {
     return (
         <Box component="div" className={classes.mainContainer}>
             <Navbar />
-            <Particles canvasClassName={classes.particlesCanva}
-                params={{
-                    particles:{
-                        number: {
-                            value: 45,
-                            density: {
-                                enable: true,
-                                value_area: 900
-                            }
-                        },
-                        shape: {
-                            type: "circle",
-                            strole: {
-                                width: 1,
-                                color: "tomato"
-                            }
-                        },
-                        size: {
-                            value: 8,
-                            random: true,
-                            animation: {
-                                enable: true,
-                                speed: 10,
-                                size_min: 0.1,
-                                sync: true
-                            }
-                        },
-                        opacity: {
-                            value: 1,
-                            random: true,
-                            animation: {
-                                enable: true,
-                                speed: 1,
-                                opacity_min: 0.1,
-                                sync: true
-                            }
-                        }
-                    }
-                }}
-            />
+            <CustomParticles />
             <Grid container justify="center" alignItems="center">
             {/* Project 1 */}
                 <Grid item xs={12} sm={8} md={6}>
