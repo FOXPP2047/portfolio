@@ -14,12 +14,13 @@ import {
 import Navbar from "./Navbar";
 import CustomParticles from "./Particles";
 
-import project1 from "../img/projects/bouncingmemory.png";
+import bmImg from "../img/projects/bouncingmemory.png";
 import project2 from "../img/projects/lunokhod.png";
-import project3 from "../img/projects/welcometothefuture.png";
-import project4 from "../img/projects/discord.jpg";
+import wfImg from "../img/projects/welcometothefuture.png";
+import discordImg from "../img/projects/discord.jpg";
+import webchatImg from "../img/projects/webchat.png";
 
-import { bmExplanation, mdExplanation, wfExplanation, riotExplanation } from "./Explanation";
+import { bmExplanation, mdExplanation, wfExplanation, riotExplanation, webchatExplanation } from "./Explanation";
 
 const useStyles = makeStyles({
     mainContainer: {
@@ -33,21 +34,25 @@ const useStyles = makeStyles({
 })
 
 const Portfolio = () => {
-    const [prj1Show, setprj1Show] = useState(false);
-    function handleShow1() {
-        prj1Show ? setprj1Show(false) : setprj1Show(true);
+    const [bmShow, setBmShow] = useState(false);
+    function handleShowBM() {
+        bmShow ? setBmShow(false) : setBmShow(true);
     }
     const [prj2Show, setprj2Show] = useState(false);
     function handleShow2() {
         prj2Show ? setprj2Show(false) : setprj2Show(true);
     }
-    const [prj3Show, setprj3Show] = useState(false);
-    function handleShow3() {
-        prj3Show ? setprj3Show(false) : setprj3Show(true);
+    const [wfShow, setwfShow] = useState(false);
+    function handleShowWf() {
+        wfShow ? setwfShow(false) : setwfShow(true);
     }
-    const [prj4Show, setprj4Show] = useState(false);
-    function handleShow4() {
-        prj4Show ? setprj4Show(false) : setprj4Show(true);
+    const [discordShow, setdiscordShow] = useState(false);
+    function handleShowDiscord() {
+        discordShow ? setdiscordShow(false) : setdiscordShow(true);
+    }
+    const [webchatShow, setwebchatShow] = useState(false);
+    function handleShowWebChat() {
+        webchatShow ? setwebchatShow(false) : setwebchatShow(true);
     }
 
     const classes = useStyles();
@@ -56,24 +61,88 @@ const Portfolio = () => {
             <Navbar />
             <CustomParticles />
             <Grid container justify="center" alignItems="center">
+            {/* Project 5 Web Chat */}
+            <Grid item xs={12} sm={8} md={6}>
+                <Card className={classes.cardContainer}>
+                    <CardActionArea>
+                        <CardMedia 
+                        component="img" 
+                        alt="Web Chat Service"
+                        height="140" 
+                        image={webchatImg} 
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5">
+                                Web Chat Service
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                { webchatShow ? webchatExplanation : webchatExplanation.substr(0, 100) + "..." }
+                                <Button component="span" size="small" color="primary" onClick={handleShowWebChat}>
+                                    { webchatShow ? "less" : "more" }
+                                </Button>
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" href="">
+                                Youtube(Not Yet)
+                            </Button>
+                            <Button size="small" color="primary" href="https://github.com/FOXPP2047/SampleWebChat">
+                                Github
+                            </Button>
+                        </CardActions>
+                    </CardActionArea>
+                </Card>
+            </Grid>
+            {/* Project 4 discord riot api */}
+            <Grid item xs={12} sm={8} md={6}>
+                <Card className={classes.cardContainer}>
+                    <CardActionArea>
+                        <CardMedia 
+                        component="img" 
+                        alt="Discord Bot Project"
+                        height="140" 
+                        image={discordImg} 
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5">
+                                Discord League of Legend Record Searcher
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                { discordShow ? riotExplanation : riotExplanation.substr(0, 100) + "..." }
+                                <Button component="span" size="small" color="primary" onClick={handleShowDiscord}>
+                                    { discordShow ? "less" : "more" }
+                                </Button>
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" href="">
+                                Youtube(Not Yet)
+                            </Button>
+                            <Button size="small" color="primary" href="https://github.com/FOXPP2047/riot_games_discord_bot">
+                                Github
+                            </Button>
+                        </CardActions>
+                    </CardActionArea>
+                </Card>
+            </Grid>
             {/* Project 1 */}
                 <Grid item xs={12} sm={8} md={6}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
                             component="img" 
-                            alt="Project 1"
+                            alt="Bouncing Memory"
                             height="140" 
-                            image={project1} 
+                            image={bmImg} 
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5">
                                     Bouncing Memory
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    { prj1Show ? bmExplanation : bmExplanation.substr(0, 100) + "..." }
-                                    <Button component="span" size="small" color="primary" onClick={handleShow1}>
-                                        { prj1Show ? "less" : "more" }
+                                    { bmShow ? bmExplanation : bmExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShowBM}>
+                                        { bmShow ? "less" : "more" }
                                     </Button>
                                 </Typography>
                             </CardContent>
@@ -89,6 +158,38 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
 
+                {/* Project 3 */}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia 
+                            component="img" 
+                            alt="Welcome to the future"
+                            height="140" 
+                            image={wfImg} 
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Welcome to the Future
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    { wfShow ? wfExplanation : wfExplanation.substr(0, 100) + "..." }
+                                    <Button component="span" size="small" color="primary" onClick={handleShowWf}>
+                                        { wfShow ? "less" : "more" }
+                                    </Button>
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://youtu.be/Qd2JnjiEkVg">
+                                    Youtube
+                                </Button>
+                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/weclometothefuture_what_I_did">
+                                    Github
+                                </Button>
+                            </CardActions>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
                 {/* Project 2 */}
                 <Grid item xs={12} sm={8} md={6}>
                     <Card className={classes.cardContainer}>
@@ -115,71 +216,6 @@ const Portfolio = () => {
                                     Youtube
                                 </Button>
                                 <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_150_what_I_did">
-                                    Github
-                                </Button>
-                            </CardActions>
-                        </CardActionArea>
-                    </Card>
-                </Grid>
-
-                {/* Project 3 */}
-                <Grid item xs={12} sm={8} md={6}>
-                    <Card className={classes.cardContainer}>
-                        <CardActionArea>
-                            <CardMedia 
-                            component="img" 
-                            alt="Project 3"
-                            height="140" 
-                            image={project3} 
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5">
-                                    Welcome to the Future
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    { prj3Show ? wfExplanation : wfExplanation.substr(0, 100) + "..." }
-                                    <Button component="span" size="small" color="primary" onClick={handleShow3}>
-                                        { prj3Show ? "less" : "more" }
-                                    </Button>
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small" color="primary" href="https://youtu.be/Qd2JnjiEkVg">
-                                    Youtube
-                                </Button>
-                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/weclometothefuture_what_I_did">
-                                    Github
-                                </Button>
-                            </CardActions>
-                        </CardActionArea>
-                    </Card>
-                </Grid>
-                {/* Project 4 discord riot api */}
-                <Grid item xs={12} sm={8} md={6}>
-                    <Card className={classes.cardContainer}>
-                        <CardActionArea>
-                            <CardMedia 
-                            component="img" 
-                            alt="Project 4"
-                            height="140" 
-                            image={project4} 
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5">
-                                    Discord League of Legend Record Searcher
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    { prj4Show ? riotExplanation : riotExplanation.substr(0, 100) + "..." }
-                                    <Button component="span" size="small" color="primary" onClick={handleShow4}>
-                                        { prj4Show ? "less" : "more" }
-                                    </Button>
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small" color="primary" href="">
-                                    Youtube(Not Yet)
-                                </Button>
-                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/riot_games_discord_bot">
                                     Github
                                 </Button>
                             </CardActions>
