@@ -23,9 +23,10 @@ const useStyles = makeStyles(theme => ({
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: "100vw",
+        //width: "100vw",
+        width: "100%",
         textAlign: "center",
-        zIndex: 1
+        zIndex: 1,
     },
     cursor: {
         color: "#f4ea8e",
@@ -40,17 +41,10 @@ function Header() {
             <Avatar className={classes.avatar} src={profile_img} alt="Yongmin Cho"/>
             </Grid>
             <Typography className={classes.title} variant="h4">
-                {/* <Typed strings={["Hello, I'm Yongmin Cho"]} typeSpeed={40} /> */}
                 <Typing speed={30} cursorClassName={classes.cursor}>Hello, I'm Yongmin Cho </Typing>
             </Typography>
             <br/>
             <Typography className={classes.subTitle} variant="h5">
-                {/* <Typed 
-                strings={["Front-end Development", "Back-end Development", "Game Development"]} 
-                typeSpeed={40} 
-                backSpeed={60}
-                loop
-                /> */}
                 <Typing speed={30} loop cursorClassName={classes.cursor}>
                     Front-end Development
                     <Typing.Delay ms={1000} />

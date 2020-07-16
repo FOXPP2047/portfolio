@@ -39,13 +39,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-
 const Resume = () => {
     const classes = useStyles();
     return (
         <>
             <Navbar />
             <CustomParticles/>
+            {/* <Iframe url="https://resume.creddle.io/embed/wk4ry63k03"
+            width="850px"
+            height="1100px"
+            id="myId"
+            display="initial"
+            position="relative"/> */}
             <img src={resume_img} className={classes.image} alt="my resume" />
         </>
     );

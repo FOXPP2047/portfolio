@@ -67,7 +67,7 @@ const Portfolio = () => {
             <CustomParticles />
             <Grid container justify="center" alignItems="center">
             {/* Project 5 Web Chat */}
-            <Grid item xs={12} sm={8} md={4}>
+            <Grid item xs={12} sm={8} md={6} lg={4}>
                 <Card className={classes.cardContainer}>
                     <CardActionArea>
                         <CardMedia 
@@ -88,9 +88,9 @@ const Portfolio = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary" href="https://youtu.be/V4n0qX29d7E">
+                            {/* <Button size="small" color="primary" href="https://youtu.be/V4n0qX29d7E">
                                 Youtube
-                            </Button>
+                            </Button> */}
                             <Button size="small" color="primary" href="https://github.com/FOXPP2047/SampleWebChat">
                                 Github
                             </Button>
@@ -99,7 +99,7 @@ const Portfolio = () => {
                 </Card>
             </Grid>
             {/* Project 4 discord riot api */}
-            <Grid item xs={12} sm={8} md={4}>
+            <Grid item xs={12} sm={8} md={6} lg={4}>
                 <Card className={classes.cardContainer}>
                     <CardActionArea>
                         <CardMedia 
@@ -131,7 +131,7 @@ const Portfolio = () => {
                 </Card>
             </Grid>
             {/* Project 1 */}
-                <Grid item xs={12} sm={8} md={4}>
+                <Grid item xs={12} sm={8} md={6} lg={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -164,7 +164,7 @@ const Portfolio = () => {
                 </Grid>
 
                 {/* Project 3 */}
-                <Grid item xs={12} sm={8} md={4}>
+                <Grid item xs={12} sm={8} md={6} lg={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -196,7 +196,7 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
                 {/* Project 2 */}
-                <Grid item xs={12} sm={8} md={4}>
+                <Grid item xs={12} sm={8} md={6} lg={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 
@@ -228,7 +228,7 @@ const Portfolio = () => {
                     </Card>
                 </Grid>
                 {/* Project 6 OpenGL Graphics Project */}
-                <Grid item xs={12} sm={8} md={4}>
+                <Grid item xs={12} sm={8} md={6} lg={4}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia 

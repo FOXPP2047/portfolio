@@ -5,7 +5,7 @@ import Particles from "react-particles-js";
 
 const useStyles = makeStyles({
     particlesCanva: {
-        position: "absolute",
+        position: "fixed",
         opacity: "0.3",
     },
 })

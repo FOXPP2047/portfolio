@@ -93,7 +93,6 @@ function Navbar() {
         </Box>
     );
     return (
-        <>
         <Box component="nav">
             <AppBar position="static" style={{background: "#222831"}}>
                 <Toolbar>
@@ -105,15 +104,14 @@ function Navbar() {
                             Yongmin's Portfolio
                         </Typography>
                     </Link>
-                    <MobilRightMenuSlider anchor="right" open={state.right} onClose={toggleSlider("right", false)}>
+                    <MobilRightMenuSlider anchor="left" open={state.right} onClose={toggleSlider("right", false)}>
                     {sideList("right")}
                     <Footer />
                     </MobilRightMenuSlider>
                 </Toolbar>
             </AppBar>
         </Box>
-        </>
     )
 }
 
-export default Navbar
+export default Navbar;
