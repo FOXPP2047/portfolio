@@ -18,6 +18,7 @@ import html_icon from "../img/programming_lang_icons/html.png";
 import css_icon from "../img/programming_lang_icons/css.svg";
 import jquery_icon from "../img/programming_lang_icons/jquery.png";
 import opengl_icon from "../img/programming_lang_icons/opengl.png";
+import py_icon from "../img/programming_lang_icons/python.png";
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
@@ -119,14 +120,21 @@ const Skills = () => {
                             {/* <ProgressBar defColor={{ fair: '#00a8cc', good: '#0779e4', excellent: '#0779e4', poor: '#00a8cc', }} width="230" trackWidth="13" percentage="40" /> */}
                         </Typography>
                         <Typography className={classes.subTitle} gutterBottom variant="h4">
+                            Python3
+                            <br/>
+                            {/* Javascript Icon by Icons8 https://iconscout.com/icon/javascript-20*/}
+                            <img className={classes.icon} src={py_icon} alt="py-icon" />
+                            {/* <ProgressBar defColor={{ fair: '#00a8cc', good: '#0779e4', excellent: '#0779e4', poor: '#00a8cc', }} width="230" trackWidth="13" percentage="80" /> */}
+                        </Typography>
+                    </Grid>
+                    <Grid container justify="center" alignItems="center" item xs={12}>
+                        <Typography className={classes.subTitle} gutterBottom variant="h4">
                             HTML5
                             <br/>
                             {/* html icon by https://www.pngkey.com/download/u2e6q8i1r5w7i1r5_svg-png-html-5-logo-black/ */}
                             <img className={classes.icon} src={html_icon} alt="html-icon" />
                             {/* <ProgressBar defColor={{ fair: '#00a8cc', good: '#0779e4', excellent: '#0779e4', poor: '#00a8cc', }} width="230" trackWidth="13" percentage="90" /> */}
                         </Typography>
-                    </Grid>
-                    <Grid container justify="center" alignItems="center" item xs={12}>
                         <Typography className={classes.subTitle} gutterBottom variant="h4">
                             CSS
                             <br/>

@@ -88,9 +88,9 @@ const Portfolio = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            {/* <Button size="small" color="primary" href="https://youtu.be/V4n0qX29d7E">
+                            <Button size="small" color="primary" href="https://www.youtube.com/watch?v=VsG4ts9il2Q&feature=youtu.be">
                                 Youtube
-                            </Button> */}
+                            </Button>
                             <Button size="small" color="primary" href="https://github.com/FOXPP2047/SampleWebChat">
                                 Github
                             </Button>
@@ -252,9 +252,9 @@ const Portfolio = () => {
                                 <Button size="small" color="primary" href="https://www.youtube.com/watch?v=RRc2RdBoLE8&feature=youtu.be">
                                     Youtube
                                 </Button>
-                                {/* <Button size="small" color="primary" href="https://github.com/FOXPP2047/GAM_150_what_I_did">
+                                <Button size="small" color="primary" href="https://github.com/FOXPP2047/Graphics-Engine">
                                     Github
-                                </Button> */}
+                                </Button>
                             </CardActions>
                         </CardActionArea>
                     </Card>

@@ -7,6 +7,7 @@ import Education from "./components/Eucation";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
+
 // import Contacts from "./components/Contacts";
 import Page404 from "./components/Page404";
 
