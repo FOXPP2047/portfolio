@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import './App.css';
 import Home from './components/';
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <HashRouter basename="/">
+      <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/education" component={Education} />
@@ -25,7 +25,7 @@ function App() {
           <Route component={Page404} />
         </Switch>
         {/* <Route path="/contacts" component={Contacts} /> */}
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
